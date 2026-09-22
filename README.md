@@ -4,7 +4,7 @@ A simple task manager web app. Users can register, log in, and manage a personal
 
 ## Deployed application
 
-Link: add your Netlify link here once deployed
+https://inspiring-centaur-baa9eb.netlify.app
 
 ## Demo video
 
