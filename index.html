@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Task Manager</title>
+<link rel="stylesheet" href="style.css" />
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+  <div id="auth-screen" class="screen">
+    <div class="card">
+      <h1>Task Manager</h1>
+      <p class="subtitle">Sign in to manage your tasks</p>
+
+      <form id="auth-form">
+        <label for="email">Email</label>
+        <input type="email" id="email" required />
+
+        <label for="password">Password</label>
+        <input type="password" id="password" required minlength="6" />
+
+        <div id="auth-error" class="error"></div>
+
+        <button type="submit" id="login-btn">Log In</button>
+        <button type="button" id="signup-btn" class="secondary">Sign Up</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="app-screen" class="screen hidden">
+    <header>
+      <h1>Task Manager</h1>
+      <div class="header-right">
+        <span id="user-email"></span>
+        <button id="logout-btn" class="secondary">Log Out</button>
+      </div>
+    </header>
+
+    <main>
+      <form id="task-form">
+        <input type="text" id="task-title" placeholder="Task title" required />
+        <input type="text" id="task-description" placeholder="Description (optional)" />
+        <button type="submit">Add Task</button>
+      </form>
+
+      <div id="task-list"></div>
+    </main>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
